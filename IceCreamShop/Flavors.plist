@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>Vanilla</string>
+		<key>topColorHex</key>
+		<string>fbf8ec</string>
+		<key>bottomColorHex</key>
+		<string>e6d7ab</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Chocolate</string>
+		<key>topColorHex</key>
+		<string>cb8c3a</string>
+		<key>bottomColorHex</key>
+		<string>6b2e0b</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Strawberry</string>
+		<key>topColorHex</key>
+		<string>ffcfcf</string>
+		<key>bottomColorHex</key>
+		<string>ff7070</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Green Tea</string>
+		<key>topColorHex</key>
+		<string>d0e27f</string>
+		<key>bottomColorHex</key>
+		<string>719326</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Blue Moon</string>
+		<key>topColorHex</key>
+		<string>bee9f1</string>
+		<key>bottomColorHex</key>
+		<string>5aa3ba</string>
+	</dict>
+</array>
+</plist>

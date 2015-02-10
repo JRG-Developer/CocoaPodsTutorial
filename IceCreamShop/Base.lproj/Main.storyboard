@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Wzd-ie-jPl">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Select Ice Cream Flavor-->
+        <scene sceneID="B30-iQ-vu8">
+            <objects>
+                <viewController id="UVM-0Q-4W9" customClass="SelectFlavorViewController" customModule="IceCreamShop" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sRg-If-22K"/>
+                        <viewControllerLayoutGuide type="bottom" id="MIH-OU-SkA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3Oz-Zq-ubG">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HDe-ty-26z" userLabel="contentView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="336"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Strawberry Ice Cream" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rzX-YL-Uxg">
+                                        <rect key="frame" x="55" y="301" width="209" height="27"/>
+                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="22"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eSO-Nb-JhM" customClass="IceCreamView" customModule="IceCreamShop" customModuleProvider="target">
+                                        <rect key="frame" x="87" y="8" width="146.5" height="293"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="eSO-Nb-JhM" secondAttribute="height" multiplier="1:2" id="nax-r4-DhJ"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="rzX-YL-Uxg" firstAttribute="top" secondItem="eSO-Nb-JhM" secondAttribute="bottom" id="9aw-Fn-3pd"/>
+                                    <constraint firstItem="eSO-Nb-JhM" firstAttribute="top" secondItem="HDe-ty-26z" secondAttribute="top" constant="8" id="EYv-Ka-Ag7"/>
+                                    <constraint firstAttribute="centerX" secondItem="rzX-YL-Uxg" secondAttribute="centerX" id="HF6-Oc-1Xk"/>
+                                    <constraint firstAttribute="bottom" secondItem="rzX-YL-Uxg" secondAttribute="bottom" constant="8" id="mkm-zC-JJE"/>
+                                    <constraint firstAttribute="centerX" secondItem="eSO-Nb-JhM" secondAttribute="centerX" id="tgv-ol-hzH"/>
+                                </constraints>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="zft-ym-2ni">
+                                <rect key="frame" x="0.0" y="336" width="320" height="80"/>
+                                <color key="backgroundColor" red="0.82352941180000006" green="0.82352941180000006" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="pRs-Au-jQs"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gxq-pv-HWT">
+                                    <size key="itemSize" width="70" height="70"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="10" minY="5" maxX="10" maxY="5"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FlavorCell" id="sc9-yt-uCE" customClass="FlavorCell" customModule="IceCreamShop" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Strawberry" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="qSb-2c-c6z">
+                                                    <rect key="frame" x="0.0" y="58" width="70" height="12"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KXI-gY-smY" customClass="FlavorView" customModule="IceCreamShop" customModuleProvider="target">
+                                                    <rect key="frame" x="15" y="9" width="40" height="40"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="40" id="7FZ-j7-SoY"/>
+                                                        <constraint firstAttribute="height" constant="40" id="afk-mI-dBr"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="20"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="qSb-2c-c6z" firstAttribute="leading" secondItem="sc9-yt-uCE" secondAttribute="leading" id="0Io-Vh-NC4"/>
+                                            <constraint firstItem="KXI-gY-smY" firstAttribute="top" secondItem="sc9-yt-uCE" secondAttribute="top" constant="9" id="2G5-xX-WUe"/>
+                                            <constraint firstAttribute="bottom" secondItem="qSb-2c-c6z" secondAttribute="bottom" id="Lcp-JC-gyy"/>
+                                            <constraint firstAttribute="trailing" secondItem="qSb-2c-c6z" secondAttribute="trailing" id="YIp-LU-Dis"/>
+                                            <constraint firstAttribute="centerX" secondItem="KXI-gY-smY" secondAttribute="centerX" id="rOg-ch-dXO"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="flavorView" destination="KXI-gY-smY" id="35U-b5-gZ2"/>
+                                            <outlet property="textLabel" destination="qSb-2c-c6z" id="dYQ-lB-iYi"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="4S9-bY-Srf" id="5Bz-1W-8ph"/>
+                                    <outlet property="delegate" destination="UVM-0Q-4W9" id="3xv-0K-TEg"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="zft-ym-2ni" secondAttribute="bottom" id="42i-PO-p8G"/>
+                            <constraint firstItem="HDe-ty-26z" firstAttribute="leading" secondItem="3Oz-Zq-ubG" secondAttribute="leading" id="EzQ-6k-lSM"/>
+                            <constraint firstAttribute="trailing" secondItem="HDe-ty-26z" secondAttribute="trailing" id="F3f-bn-ZgI"/>
+                            <constraint firstItem="zft-ym-2ni" firstAttribute="leading" secondItem="3Oz-Zq-ubG" secondAttribute="leading" id="Pqc-OF-E8m"/>
+                            <constraint firstItem="HDe-ty-26z" firstAttribute="top" secondItem="sRg-If-22K" secondAttribute="bottom" id="Y6l-My-6YZ"/>
+                            <constraint firstAttribute="trailing" secondItem="zft-ym-2ni" secondAttribute="trailing" id="qtF-sB-2Rp"/>
+                            <constraint firstItem="zft-ym-2ni" firstAttribute="top" secondItem="HDe-ty-26z" secondAttribute="bottom" id="uZO-ce-mNC"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationItem key="navigationItem" title="Select Ice Cream Flavor" id="s0K-Qv-2Qg"/>
+                    <connections>
+                        <outlet property="collectionView" destination="zft-ym-2ni" id="tcB-zS-cg6"/>
+                        <outlet property="iceCreamView" destination="eSO-Nb-JhM" id="Eve-ba-74N"/>
+                        <outlet property="label" destination="rzX-YL-Uxg" id="q4K-7O-HsO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I2s-P7-l5b" sceneMemberID="firstResponder"/>
+                <customObject id="4S9-bY-Srf" customClass="SelectFlavorDataSource" customModule="IceCreamShop" customModuleProvider="target">
+                    <connections>
+                        <outlet property="collectionView" destination="zft-ym-2ni" id="4Nw-1k-4ef"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="816.75" y="366"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Ioh-TU-YBK">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Wzd-ie-jPl" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xvi-lv-z5o">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="UVM-0Q-4W9" kind="relationship" relationship="rootViewController" id="cgR-5l-I8O"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KE2-2V-d0z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="448" y="366"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,10 @@
+PODS:
+  - UIColor-HexString (1.1.0)
+
+DEPENDENCIES:
+  - UIColor-HexString (~> 1.1)
+
+SPEC CHECKSUMS:
+  UIColor-HexString: a9eabf02c1a2f9036ed6ac9cb2a3ea086f3b39e4
+
+COCOAPODS: 0.36.0.beta.2
