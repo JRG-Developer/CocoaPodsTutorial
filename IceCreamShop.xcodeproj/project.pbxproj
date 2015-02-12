@@ -12,15 +12,16 @@
 		4274BF1C1A88274600937936 /* Flavor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4274BF1B1A88274600937936 /* Flavor.swift */; };
 		4274BF1E1A8827CF00937936 /* Flavors.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4274BF1D1A8827CF00937936 /* Flavors.plist */; };
 		4274BF211A88371900937936 /* SelectFlavorDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4274BF201A88371900937936 /* SelectFlavorDataSource.swift */; };
-		4274BF231A88518B00937936 /* FlavorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4274BF221A88518B00937936 /* FlavorCell.swift */; };
-		4274BF251A88523300937936 /* FlavorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4274BF241A88523300937936 /* FlavorView.swift */; };
+		4274BF231A88518B00937936 /* ScoopCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4274BF221A88518B00937936 /* ScoopCell.swift */; };
+		4274BF251A88523300937936 /* ScoopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4274BF241A88523300937936 /* ScoopView.swift */; };
 		42801B551A881DF600DEB026 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42801B541A881DF600DEB026 /* AppDelegate.swift */; };
 		42801B571A881DF600DEB026 /* SelectFlavorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42801B561A881DF600DEB026 /* SelectFlavorViewController.swift */; };
 		42801B5A1A881DF600DEB026 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42801B581A881DF600DEB026 /* Main.storyboard */; };
 		42801B6B1A881DF600DEB026 /* IceCreamShopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42801B6A1A881DF600DEB026 /* IceCreamShopTests.swift */; };
 		42801B781A881E5500DEB026 /* IceCreamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42801B771A881E5500DEB026 /* IceCreamView.swift */; };
 		42B433FB1A89ECFB0091170B /* FlavorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B433FA1A89ECFB0091170B /* FlavorFactory.swift */; };
-		6B507F802C73C8120FB7A8B5 /* libPods-IceCreamShop.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CA31E239DC58DFC187F76525 /* libPods-IceCreamShop.a */; };
+		42C970621A8C9CAF002FEFF3 /* RGBAColorFromString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C970611A8C9CAF002FEFF3 /* RGBAColorFromString.swift */; };
+		9EA771D3846E62714E37BAA8 /* Pods_IceCreamShop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C268C2B2AA08567943FEC15 /* Pods_IceCreamShop.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,13 +35,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C268C2B2AA08567943FEC15 /* Pods_IceCreamShop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IceCreamShop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F1E9FA6E1CE93F1DD015A98 /* Pods-IceCreamShop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IceCreamShop.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IceCreamShop/Pods-IceCreamShop.debug.xcconfig"; sourceTree = "<group>"; };
 		4274BF161A88264600937936 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4274BF181A88268F00937936 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		4274BF1B1A88274600937936 /* Flavor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flavor.swift; sourceTree = "<group>"; };
 		4274BF1D1A8827CF00937936 /* Flavors.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Flavors.plist; sourceTree = "<group>"; };
 		4274BF201A88371900937936 /* SelectFlavorDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectFlavorDataSource.swift; sourceTree = "<group>"; };
-		4274BF221A88518B00937936 /* FlavorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlavorCell.swift; sourceTree = "<group>"; };
-		4274BF241A88523300937936 /* FlavorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlavorView.swift; sourceTree = "<group>"; };
+		4274BF221A88518B00937936 /* ScoopCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoopCell.swift; sourceTree = "<group>"; };
+		4274BF241A88523300937936 /* ScoopView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoopView.swift; sourceTree = "<group>"; };
 		42801B4F1A881DF600DEB026 /* IceCreamShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IceCreamShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42801B531A881DF600DEB026 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42801B541A881DF600DEB026 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -52,9 +55,8 @@
 		42801B771A881E5500DEB026 /* IceCreamView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IceCreamView.swift; sourceTree = "<group>"; };
 		42B433FA1A89ECFB0091170B /* FlavorFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlavorFactory.swift; sourceTree = "<group>"; };
 		42B433FC1A89F78F0091170B /* IceCreamShop-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IceCreamShop-Bridging-Header.h"; sourceTree = "<group>"; };
-		858FDDBC6328DE314DF7490A /* Pods-IceCreamShop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IceCreamShop.release.xcconfig"; path = "Pods/Target Support Files/Pods-IceCreamShop/Pods-IceCreamShop.release.xcconfig"; sourceTree = "<group>"; };
-		8FABDC7A1B8602CACAD1E44B /* Pods-IceCreamShop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IceCreamShop.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IceCreamShop/Pods-IceCreamShop.debug.xcconfig"; sourceTree = "<group>"; };
-		CA31E239DC58DFC187F76525 /* libPods-IceCreamShop.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IceCreamShop.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		42C970611A8C9CAF002FEFF3 /* RGBAColorFromString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RGBAColorFromString.swift; sourceTree = "<group>"; };
+		8AF9D59178024E509C45D341 /* Pods-IceCreamShop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IceCreamShop.release.xcconfig"; path = "Pods/Target Support Files/Pods-IceCreamShop/Pods-IceCreamShop.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B507F802C73C8120FB7A8B5 /* libPods-IceCreamShop.a in Frameworks */,
+				9EA771D3846E62714E37BAA8 /* Pods_IceCreamShop.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +78,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D41A64F11666E2B1FCDF785 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2F1E9FA6E1CE93F1DD015A98 /* Pods-IceCreamShop.debug.xcconfig */,
+				8AF9D59178024E509C45D341 /* Pods-IceCreamShop.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		4274BF1A1A88273100937936 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -84,12 +95,13 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
-		4274BF1F1A88283F00937936 /* IceCreamView */ = {
+		4274BF1F1A88283F00937936 /* Ice Cream */ = {
 			isa = PBXGroup;
 			children = (
 				42801B771A881E5500DEB026 /* IceCreamView.swift */,
+				4274BF241A88523300937936 /* ScoopView.swift */,
 			);
-			name = IceCreamView;
+			name = "Ice Cream";
 			sourceTree = "<group>";
 		};
 		42801B461A881DF600DEB026 = {
@@ -98,8 +110,8 @@
 				42801B511A881DF600DEB026 /* IceCreamShop */,
 				42801B671A881DF600DEB026 /* IceCreamShopTests */,
 				42801B501A881DF600DEB026 /* Products */,
-				768485439FD058E50D6ACC6F /* Pods */,
 				F27AE8DE50732058B38DEF52 /* Frameworks */,
+				0D41A64F11666E2B1FCDF785 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -115,6 +127,7 @@
 		42801B511A881DF600DEB026 /* IceCreamShop */ = {
 			isa = PBXGroup;
 			children = (
+				42C970601A8C9C9C002FEFF3 /* Categories */,
 				42801B741A881DFC00DEB026 /* Controllers */,
 				42B433F91A89ECE00091170B /* Factories */,
 				4274BF1A1A88273100937936 /* Models */,
@@ -164,10 +177,9 @@
 		42801B751A881E0800DEB026 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				42B434001A8A1DF90091170B /* FlavorCell */,
-				4274BF1F1A88283F00937936 /* IceCreamView */,
-				4274BF181A88268F00937936 /* LaunchScreen.xib */,
-				42801B581A881DF600DEB026 /* Main.storyboard */,
+				4274BF1F1A88283F00937936 /* Ice Cream */,
+				42C9705C1A8C893C002FEFF3 /* Storyboards & Nibs */,
+				42B434001A8A1DF90091170B /* Table View Cells */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -189,28 +201,35 @@
 			name = Factories;
 			sourceTree = "<group>";
 		};
-		42B434001A8A1DF90091170B /* FlavorCell */ = {
+		42B434001A8A1DF90091170B /* Table View Cells */ = {
 			isa = PBXGroup;
 			children = (
-				4274BF221A88518B00937936 /* FlavorCell.swift */,
-				4274BF241A88523300937936 /* FlavorView.swift */,
+				4274BF221A88518B00937936 /* ScoopCell.swift */,
 			);
-			name = FlavorCell;
+			name = "Table View Cells";
 			sourceTree = "<group>";
 		};
-		768485439FD058E50D6ACC6F /* Pods */ = {
+		42C9705C1A8C893C002FEFF3 /* Storyboards & Nibs */ = {
 			isa = PBXGroup;
 			children = (
-				8FABDC7A1B8602CACAD1E44B /* Pods-IceCreamShop.debug.xcconfig */,
-				858FDDBC6328DE314DF7490A /* Pods-IceCreamShop.release.xcconfig */,
+				4274BF181A88268F00937936 /* LaunchScreen.xib */,
+				42801B581A881DF600DEB026 /* Main.storyboard */,
 			);
-			name = Pods;
+			name = "Storyboards & Nibs";
+			sourceTree = "<group>";
+		};
+		42C970601A8C9C9C002FEFF3 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				42C970611A8C9CAF002FEFF3 /* RGBAColorFromString.swift */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 		F27AE8DE50732058B38DEF52 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CA31E239DC58DFC187F76525 /* libPods-IceCreamShop.a */,
+				0C268C2B2AA08567943FEC15 /* Pods_IceCreamShop.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -222,11 +241,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 42801B6E1A881DF600DEB026 /* Build configuration list for PBXNativeTarget "IceCreamShop" */;
 			buildPhases = (
-				8447C571D2AEE64CB0F114A0 /* Check Pods Manifest.lock */,
+				92A57A341991C8208A90F946 /* Check Pods Manifest.lock */,
 				42801B4B1A881DF600DEB026 /* Sources */,
 				42801B4C1A881DF600DEB026 /* Frameworks */,
 				42801B4D1A881DF600DEB026 /* Resources */,
-				D44DFE5D82224C70F3C7878E /* Copy Pods Resources */,
+				65B29CA4E45B3AE0A857B3D6 /* Embed Pods Frameworks */,
+				398B496B3CD1CE8A36B15EAA /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -314,22 +334,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		8447C571D2AEE64CB0F114A0 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		D44DFE5D82224C70F3C7878E /* Copy Pods Resources */ = {
+		398B496B3CD1CE8A36B15EAA /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -344,6 +349,36 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IceCreamShop/Pods-IceCreamShop-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		65B29CA4E45B3AE0A857B3D6 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IceCreamShop/Pods-IceCreamShop-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		92A57A341991C8208A90F946 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -354,11 +389,12 @@
 				42801B571A881DF600DEB026 /* SelectFlavorViewController.swift in Sources */,
 				42801B551A881DF600DEB026 /* AppDelegate.swift in Sources */,
 				4274BF1C1A88274600937936 /* Flavor.swift in Sources */,
-				4274BF231A88518B00937936 /* FlavorCell.swift in Sources */,
+				4274BF231A88518B00937936 /* ScoopCell.swift in Sources */,
 				42B433FB1A89ECFB0091170B /* FlavorFactory.swift in Sources */,
 				42801B781A881E5500DEB026 /* IceCreamView.swift in Sources */,
+				42C970621A8C9CAF002FEFF3 /* RGBAColorFromString.swift in Sources */,
 				4274BF211A88371900937936 /* SelectFlavorDataSource.swift in Sources */,
-				4274BF251A88523300937936 /* FlavorView.swift in Sources */,
+				4274BF251A88523300937936 /* ScoopView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,7 +507,7 @@
 		};
 		42801B6F1A881DF600DEB026 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8FABDC7A1B8602CACAD1E44B /* Pods-IceCreamShop.debug.xcconfig */;
+			baseConfigurationReference = 2F1E9FA6E1CE93F1DD015A98 /* Pods-IceCreamShop.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -486,7 +522,7 @@
 		};
 		42801B701A881DF600DEB026 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 858FDDBC6328DE314DF7490A /* Pods-IceCreamShop.release.xcconfig */;
+			baseConfigurationReference = 8AF9D59178024E509C45D341 /* Pods-IceCreamShop.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

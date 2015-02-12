@@ -13,7 +13,8 @@ class SelectFlavorDataSource: NSObject, UICollectionViewDataSource {
   // MARK: Identifiers
   
   private struct Identifiers {
-    static let FlavorCell = "FlavorCell"
+    static let ScoopCell = "ScoopCell"
+    static let LoadingCell = "LoadingCell"
   }
   
   // MARK: Variables
@@ -27,19 +28,35 @@ class SelectFlavorDataSource: NSObject, UICollectionViewDataSource {
   // MARK: UICollectionViewDataSource
   
   func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return flavors.count
+    return max(flavors.count, 1)
   }
   
   func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
     
-    let cell = collectionView.dequeueReusableCellWithReuseIdentifier(Identifiers.FlavorCell, forIndexPath: indexPath) as FlavorCell
-    configureFlavorCell(cell, atIndexPath: indexPath)
+    if flavors.count == 0 {
+      return loadingCellAtIndexPath(indexPath)
+      
+    } else {
+      return scoopCellAtIndexPath(indexPath)
+    }
+  }
+  
+  private func loadingCellAtIndexPath(indexPath: NSIndexPath) -> UICollectionViewCell {
+    
+    return collectionView.dequeueReusableCellWithReuseIdentifier(Identifiers.LoadingCell, forIndexPath: indexPath) as UICollectionViewCell
+  }
+  
+  private func scoopCellAtIndexPath(indexPath: NSIndexPath) -> UICollectionViewCell {
+   
+    let cell = collectionView.dequeueReusableCellWithReuseIdentifier(Identifiers.ScoopCell, forIndexPath: indexPath) as ScoopCell
+    configureScoopCell(cell, atIndexPath: indexPath)
     return cell
   }
   
-  func configureFlavorCell(cell: FlavorCell, atIndexPath indexPath: NSIndexPath) {    
+  private func configureScoopCell(cell: ScoopCell, atIndexPath indexPath: NSIndexPath) {
     
     let flavor = flavors[indexPath.row]
     cell.updateWithFlavor(flavor)
   }
+  
 }

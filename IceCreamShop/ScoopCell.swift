@@ -1,5 +1,5 @@
 //
-//  FlavorCell.swift
+//  ScoopCell.swift
 //  IceCreamShop
 //
 //  Created by Joshua Greene on 1/16/15.
@@ -8,23 +8,23 @@
 
 import UIKit
 
-class FlavorCell: UICollectionViewCell {
+class ScoopCell: UICollectionViewCell {
 
   // MARK: Outlets
   
   @IBOutlet var textLabel: UILabel!
-  @IBOutlet var flavorView: FlavorView!
+  @IBOutlet var scoopView: ScoopView!
 }
 
 // MARK: Flavor Adapter
 
-extension FlavorCell: FlavorAdapter {
+extension ScoopCell: FlavorAdapter {
   
   func updateWithFlavor(flavor: Flavor) {
     
-    flavorView.topColor = flavor.topColor
-    flavorView.bottomColor = flavor.bottomColor
-    flavorView.setNeedsDisplay()
+    scoopView.topColor = flavor.topColor
+    scoopView.bottomColor = flavor.bottomColor
+    scoopView.setNeedsDisplay()
     
     textLabel.text = flavor.name
   }

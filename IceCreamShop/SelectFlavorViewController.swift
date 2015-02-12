@@ -6,6 +6,7 @@
 //  Copyright (c) 2015 Razeware, LLC. All rights reserved.
 //
 
+import AlamoFire
 import UIKit
 
 class SelectFlavorViewController: UIViewController, UICollectionViewDelegate {
@@ -13,6 +14,7 @@ class SelectFlavorViewController: UIViewController, UICollectionViewDelegate {
   // MARK: Variables
   
   var flavors: [Flavor] = [] {
+    
     didSet {
      selectFlavorDataSource?.flavors = flavors
     }
@@ -21,6 +23,8 @@ class SelectFlavorViewController: UIViewController, UICollectionViewDelegate {
   private var selectFlavorDataSource: SelectFlavorDataSource? {
     return collectionView?.dataSource as SelectFlavorDataSource?
   }
+  
+  private let flavorFactory = FlavorFactory()
   
   // MARK: Outlets
   
@@ -33,9 +37,27 @@ class SelectFlavorViewController: UIViewController, UICollectionViewDelegate {
   override func viewDidLoad() {
 
     super.viewDidLoad()
-  
+    
     selectFlavorDataSource?.flavors = flavors
     selectFirstFlavor()
+    
+    loadFlavors()
+  }
+  
+  // WARNING: Update this URL...
+  
+  private func loadFlavors() {
+   
+    Alamofire.request(.GET, "", parameters: nil, encoding: .PropertyList(NSPropertyListFormat.XMLFormat_v1_0, 0)).response { (_, _, array, error) -> Void in
+      
+      if let error = error {
+        println("Error: \(error)")
+        
+      } else {
+        self.flavors = self.flavorFactory.flavorsFromDictionaryArray(array as [NSDictionary])
+        self.selectFirstFlavor()
+      }
+    }
   }
   
   private func selectFirstFlavor() {

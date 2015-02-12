@@ -9,7 +9,7 @@
 import Foundation
 
 class FlavorFactory {
-    
+  
   func flavorsFromPlistNamed(plistName: String, bundle: NSBundle = NSBundle.mainBundle()) -> [Flavor]? {
     
     let path = bundle.pathForResource(plistName, ofType: "plist")!
@@ -18,7 +18,12 @@ class FlavorFactory {
     let options = Int(NSPropertyListMutabilityOptions.Immutable.rawValue)
     let array = NSPropertyListSerialization.propertyListWithData(data, options: options, format: nil, error: nil) as [NSDictionary]!
     
-    var flavors = [Flavor]()
+    return flavorsFromDictionaryArray(array)
+  }
+  
+  func flavorsFromDictionaryArray(array: [NSDictionary]) -> [Flavor] {
+    
+    var flavors: [Flavor] = []
     
     for dictionary in array {
       

@@ -1,0 +1,36 @@
+//
+//  FlavorView.swift
+//  IceCreamShop
+//
+//  Created by Joshua Greene on 2/8/15.
+//  Copyright (c) 2015 Razeware, LLC. All rights reserved.
+//
+
+import UIKit
+
+@IBDesignable
+
+class ScoopView: UIView {
+  
+  // MARK: Variables
+  
+  @IBInspectable var topColor: UIColor = RGB(255, 207, 207)
+  @IBInspectable var bottomColor: UIColor = RGB(255, 112, 112)
+  
+  // MARK: View Lifecycle
+  
+  override func drawRect(rect: CGRect) {
+    
+    let context = UIGraphicsGetCurrentContext()
+    
+    var path = CGPathCreateWithEllipseInRect(bounds, nil)
+    CGContextAddPath(context, path)
+    CGContextClip(context)
+    
+    let gradient = CGGradientCreateWithColors(CGColorSpaceCreateDeviceRGB(), [topColor.CGColor, bottomColor.CGColor], [0, 1])
+    let startPoint = CGPointMake(bounds.midX, bounds.minY)
+    let endPoint = CGPointMake(bounds.midX, bounds.maxY)
+    
+    CGContextDrawLinearGradient(context, gradient, startPoint, endPoint, 0)
+  }
+}

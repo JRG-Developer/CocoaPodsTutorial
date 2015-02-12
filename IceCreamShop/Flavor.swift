@@ -10,9 +10,23 @@ import UIKit
 
 struct Flavor {
   
+  // MARK: Variables
+  
   let name: String
   let topColor: UIColor
   let bottomColor: UIColor
+  
+  // MARK: Static Methods
+  
+  static func Vanilla() -> Flavor {
+    return Flavor(name:"Vanilla", topColor:RGB(251, 248, 236), bottomColor:RGB(230, 215, 171))
+  }
+  
+  static func Chocolate() -> Flavor {
+    return Flavor(name:"Chocolate", topColor:RGB(203, 140, 58), bottomColor:RGB(107, 46, 11))
+  }
+  
+  // MARK: Initializers
   
   init(name: String, topColor: UIColor, bottomColor: UIColor) {
     self.name = name
@@ -22,18 +36,18 @@ struct Flavor {
   
   init?(dictionary: NSDictionary) {
     
-    let topColorHex = dictionary["topColorHex"] as String?
+    let topColorString = dictionary["topColor"] as String?
     
-    if let topColor = UIColor(hexString: topColorHex) {
+    if let topColor = UIColor.RGBAColorFromString(topColorString) {
       self.topColor = topColor
       
     } else {
       return nil
     }
     
-    let bottomColorHex = dictionary["bottomColorHex"] as String?
+    let bottomColorString = dictionary["bottomColor"] as String?
     
-    if let bottomColor = UIColor(hexString: bottomColorHex) {
+    if let bottomColor = UIColor.RGBAColorFromString(bottomColorString) {
       self.bottomColor = bottomColor
       
     } else {
@@ -46,7 +60,6 @@ struct Flavor {
     } else {
       return nil
     }
-
   }
 }
 
