@@ -7,16 +7,17 @@
 //
 
 import AlamoFire
+import MBProgressHUD
 import UIKit
 
-class SelectFlavorViewController: UIViewController, UICollectionViewDelegate {
+public class SelectFlavorViewController: UIViewController, UICollectionViewDelegate {
   
   // MARK: Variables
   
   var flavors: [Flavor] = [] {
     
     didSet {
-     selectFlavorDataSource?.flavors = flavors
+      selectFlavorDataSource?.flavors = flavors
     }
   }
   
@@ -28,14 +29,15 @@ class SelectFlavorViewController: UIViewController, UICollectionViewDelegate {
   
   // MARK: Outlets
   
+  @IBOutlet var contentView: UIView!
   @IBOutlet var collectionView: UICollectionView!
   @IBOutlet var iceCreamView: IceCreamView!
   @IBOutlet var label: UILabel!
   
   // MARK: View Lifecycle
   
-  override func viewDidLoad() {
-
+  public override func viewDidLoad() {
+    
     super.viewDidLoad()
     
     selectFlavorDataSource?.flavors = flavors
@@ -43,25 +45,50 @@ class SelectFlavorViewController: UIViewController, UICollectionViewDelegate {
     
     loadFlavors()
   }
-  
-  // WARNING: Update this URL...
-  
+    
   private func loadFlavors() {
-   
-    Alamofire.request(.GET, "", parameters: nil, encoding: .PropertyList(NSPropertyListFormat.XMLFormat_v1_0, 0)).response { (_, _, array, error) -> Void in
-      
-      if let error = error {
-        println("Error: \(error)")
+    
+    self.showLoadingHUD()
+    
+    Alamofire.request(.GET, "https://raw.githubusercontent.com/JRG-Developer/CocoaPodsTutorial/master/IceCreamShop/Flavors.plist",
+      parameters: nil, encoding: .PropertyList(NSPropertyListFormat.XMLFormat_v1_0, 0)).responsePropertyList { (_, response, array, error) -> Void in
         
-      } else {
-        self.flavors = self.flavorFactory.flavorsFromDictionaryArray(array as [NSDictionary])
-        self.selectFirstFlavor()
-      }
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), { () -> Void in
+          
+          sleep(1)
+          
+          dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            
+            self.hideLoadingHUD()
+            
+            if error != nil {
+              println("Error: \(error!)")
+              
+            } else if array?.count == 0{
+              println("No flavors were found!")
+              
+            } else if let array = array as? [[String: String]] {
+              
+              self.flavors = self.flavorFactory.flavorsFromDictionaryArray(array)
+              self.collectionView.reloadData()
+              self.selectFirstFlavor()
+            }
+          })
+        })
     }
   }
   
+  private func showLoadingHUD() {
+    let hud = MBProgressHUD.showHUDAddedTo(contentView, animated: true)
+    hud.labelText = "Loading..."
+  }
+  
+  private func hideLoadingHUD() {
+    MBProgressHUD.hideAllHUDsForView(contentView, animated: true)
+  }
+  
   private func selectFirstFlavor() {
-
+    
     if let flavor = flavors.first {
       updateWithFlavor(flavor)
     }
@@ -69,8 +96,8 @@ class SelectFlavorViewController: UIViewController, UICollectionViewDelegate {
   
   // MARK: UICollectionViewDelegate
   
-  func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {    
-        
+  public func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+    
     let flavor = flavors[indexPath.row]
     updateWithFlavor(flavor)
   }
@@ -78,7 +105,7 @@ class SelectFlavorViewController: UIViewController, UICollectionViewDelegate {
   // MARK: Internal
   
   private func updateWithFlavor(flavor: Flavor) {
-
+    
     iceCreamView.updateWithFlavor(flavor)
     label.text = "\(flavor.name) Ice Cream"
   }

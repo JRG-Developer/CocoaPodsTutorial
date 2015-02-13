@@ -14,8 +14,17 @@ class IceCreamView: UIView {
   
   // MARK: Variables
   
-  @IBInspectable var topColor: UIColor = RGB(255, 207, 207)
-  @IBInspectable var bottomColor: UIColor = RGB(255, 112, 112)
+  @IBInspectable var topColor: UIColor = RGB(251, 248, 236) {
+    didSet {
+      setNeedsDisplay()
+    }
+  }
+  
+  @IBInspectable var bottomColor: UIColor = RGB(230, 215, 171) {
+    didSet {
+      setNeedsDisplay()
+    }
+  }
   
   private let coneOuterColor = RGB(184, 104, 50)
   private let coneInnerColor = RGB(209, 160, 102)
@@ -46,7 +55,6 @@ class IceCreamView: UIView {
       CGPointMake(iceCreamRect.midX, iceCreamRect.maxY),
       0)
     CGContextRestoreGState(context)
-    
     
     //// Cone Drawing
     var conePath = UIBezierPath()

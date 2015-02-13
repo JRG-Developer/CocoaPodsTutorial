@@ -28,24 +28,13 @@ class SelectFlavorDataSource: NSObject, UICollectionViewDataSource {
   // MARK: UICollectionViewDataSource
   
   func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return max(flavors.count, 1)
+    return flavors.count
   }
   
   func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
     
-    if flavors.count == 0 {
-      return loadingCellAtIndexPath(indexPath)
-      
-    } else {
-      return scoopCellAtIndexPath(indexPath)
-    }
+    return scoopCellAtIndexPath(indexPath)
   }
-  
-  private func loadingCellAtIndexPath(indexPath: NSIndexPath) -> UICollectionViewCell {
-    
-    return collectionView.dequeueReusableCellWithReuseIdentifier(Identifiers.LoadingCell, forIndexPath: indexPath) as UICollectionViewCell
-  }
-  
   private func scoopCellAtIndexPath(indexPath: NSIndexPath) -> UICollectionViewCell {
    
     let cell = collectionView.dequeueReusableCellWithReuseIdentifier(Identifiers.ScoopCell, forIndexPath: indexPath) as ScoopCell

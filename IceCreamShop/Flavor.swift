@@ -34,9 +34,9 @@ struct Flavor {
     self.bottomColor = bottomColor
   }
   
-  init?(dictionary: NSDictionary) {
+  init?(dictionary: [String: String]) {
     
-    let topColorString = dictionary["topColor"] as String?
+    let topColorString = dictionary["topColor"]
     
     if let topColor = UIColor.RGBAColorFromString(topColorString) {
       self.topColor = topColor
@@ -45,7 +45,7 @@ struct Flavor {
       return nil
     }
     
-    let bottomColorString = dictionary["bottomColor"] as String?
+    let bottomColorString = dictionary["bottomColor"]
     
     if let bottomColor = UIColor.RGBAColorFromString(bottomColorString) {
       self.bottomColor = bottomColor
@@ -54,7 +54,7 @@ struct Flavor {
       return nil
     }
     
-    if let name = dictionary["name"] as String? {
+    if let name = dictionary["name"] {
       self.name = name
       
     } else {
