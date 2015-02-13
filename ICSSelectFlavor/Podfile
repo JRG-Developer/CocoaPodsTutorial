@@ -1,0 +1,12 @@
+
+platform :ios, '8.0'
+
+target 'ICSSelectFlavor' do
+  pod 'Alamofire', '~> 1.1'
+  pod 'MBProgressHUD', '~> 0.9'
+end
+
+target 'ICSSelectFlavorTests' do
+
+end
+
